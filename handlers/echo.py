@@ -29,7 +29,7 @@ async def echo_handler(message: types.Message):
 
     for user in users:
         await bot.copy_message(
+            user,
             message.chat.id, 
-            user, 
-            message.message_id
+            message.message_id,
         )
